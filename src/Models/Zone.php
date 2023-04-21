@@ -2,6 +2,7 @@
 
 namespace Bikaraan\BZones\Models;
 
+use Kalnoy\Nestedset\NodeTrait;
 use Spatie\Activitylog\LogOptions;
 use Spatie\Activitylog\Traits\LogsActivity;
 use Illuminate\Database\Eloquent\SoftDeletes;
@@ -31,6 +32,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
  */
 class Zone extends BaseModel
 {
+    use NodeTrait;
     use SoftDeletes;
     use LogsActivity;
 

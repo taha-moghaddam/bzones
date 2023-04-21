@@ -14,6 +14,9 @@ return new class extends Migration
         Schema::create(config('admin.extensions.bzones.config.db-prefix') . 'zones', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
+
+            $table->nestedSet();
+            
             $table->timestamps();
             $table->softDeletes();
         });

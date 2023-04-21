@@ -1,0 +1,38 @@
+{
+    "name": "laravel-admin-ext/bzones",
+    "description": "Dynamic tree-like zones(country, provinces, etc) panel and service.",
+    "type": "library",
+    "keywords": ["laravel-admin", "extension", "bikaraan", "zones"],
+    "homepage": "https://github.com/laravel-admin-ext/bzones",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "mtm",
+            "email": "m5taha5m@gmail.com"
+        }
+    ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/taha-moghaddam/bzones"
+        }
+    ],
+    "require": {
+        "php": ">=8.1",
+        "encore/laravel-admin": "^1.6|dev-master@dev",
+        "spatie/laravel-activitylog": "^4.7",
+        "laravel-admin-ext/grid-sortable": "dev-master@dev"
+    },
+    "autoload": {
+        "psr-4": {
+            "Bikaraan\\BZones\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Bikaraan\\BZones\\BZonesServiceProvider"
+            ]
+        }
+    }
+}

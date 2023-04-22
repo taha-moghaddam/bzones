@@ -11,5 +11,5 @@ Route::group([
 
     $router->resource('zones', ZonesController::class);
 
-    $router->get('search', SearchController::class);
+    $router->get('search', SearchController::class)->name('search');
 });

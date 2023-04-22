@@ -11,12 +11,12 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(config('admin.extensions.bzones.config.db-prefix') . 'zones', function (Blueprint $table) {
+        Schema::create(config('admin.extensions.bzones.config.db-prefix', 'bzones_') . 'zones', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
 
             $table->nestedSet();
-            
+
             $table->timestamps();
             $table->softDeletes();
         });
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(config('admin.extensions.bzones.config.db-prefix') . 'zones');
+        Schema::dropIfExists(config('admin.extensions.bzones.config.db-prefix', 'bzones_') . 'zones');
     }
 };

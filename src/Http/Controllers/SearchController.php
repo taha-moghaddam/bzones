@@ -17,7 +17,10 @@ class SearchController extends Controller
 
         $q = trim($request->input('q'));
 
-        $results = Zone::where('name', 'like', "%$q%")->with('ancestors')->get();
+        $results = Zone::where('name', 'like', "%$q%")
+            ->whereIsLeaf()
+            ->with('ancestors')
+            ->get();
 
         return ZoneResource::collection($results);
     }

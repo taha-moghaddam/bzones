@@ -1,4 +1,4 @@
-laravel-admin extension
+bCore extension
 ======
 
 # BZones

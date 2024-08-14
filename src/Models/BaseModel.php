@@ -3,7 +3,7 @@
 namespace Bikaraan\BZones\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use Encore\Admin\Traits\DefaultDatetimeFormat;
+use Bikaraan\BCore\Traits\DefaultDatetimeFormat;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 /**
@@ -25,7 +25,7 @@ class BaseModel extends Model
     {
         parent::__construct();
 
-        $this->prefix = config('admin.extensions.bzones.config.db-prefix', 'bzones_');
+        $this->prefix = config('bcore.extensions.bzones.config.db-prefix', 'bzones_');
         $this->table = $this->prefix . $this->getTable();
     }
 }

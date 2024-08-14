@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create(config('admin.extensions.bzones.config.db-prefix', 'bzones_') . 'zones', function (Blueprint $table) {
+        Schema::create(config('bcore.extensions.bzones.config.db-prefix', 'bzones_') . 'zones', function (Blueprint $table) {
             $table->id();
             $table->string('name', 150);
 
@@ -27,6 +27,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists(config('admin.extensions.bzones.config.db-prefix', 'bzones_') . 'zones');
+        Schema::dropIfExists(config('bcore.extensions.bzones.config.db-prefix', 'bzones_') . 'zones');
     }
 };

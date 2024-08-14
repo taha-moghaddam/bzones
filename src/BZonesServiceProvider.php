@@ -26,7 +26,7 @@ class BZonesServiceProvider extends ServiceProvider
             $this->loadMigrationsFrom(__DIR__ . '/../database/migrations');
 
             $this->publishes(
-                [$assets => public_path('vendor/laravel-admin-ext/bzones')],
+                [$assets => public_path('vendor/bcore-ext/bzones')],
                 'bzones'
             );
         }

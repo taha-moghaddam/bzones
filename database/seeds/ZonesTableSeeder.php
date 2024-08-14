@@ -14,7 +14,7 @@ class BzonesZonesTableSeeder extends Seeder
      */
     public function run()
     {
-        $table = config('admin.extensions.bzones.config.db-prefix', 'bzones_') . 'zones';
+        $table = config('bcore.extensions.bzones.config.db-prefix', 'bzones_') . 'zones';
 
         \DB::table($table)->delete();
         

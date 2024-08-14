@@ -11,7 +11,7 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::table(config('admin.database.users_table', 'admin_users'), function (Blueprint $table) {
+        Schema::table(config('bcore.database.users_table', 'admin_users'), function (Blueprint $table) {
             $table->foreignId('zone_id')->nullable()->after('name');
         });
     }
@@ -21,7 +21,7 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::table(config('admin.database.users_table', 'admin_users'), function (Blueprint $table) {
+        Schema::table(config('bcore.database.users_table', 'admin_users'), function (Blueprint $table) {
             $table->dropColumn('zone_id');
         });
     }

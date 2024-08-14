@@ -2,7 +2,7 @@
 
 namespace Bikaraan\BZones;
 
-use Encore\Admin\Extension;
+use Bikaraan\BCore\Extension;
 
 class BZones extends Extension
 {

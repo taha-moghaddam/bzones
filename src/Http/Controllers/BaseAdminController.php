@@ -2,7 +2,7 @@
 
 namespace Bikaraan\BZones\Http\Controllers;
 
-use Encore\Admin\Controllers\AdminController;
+use Bikaraan\BCore\Controllers\AdminController;
 use Illuminate\Support\Facades\Lang;
 
 class BaseAdminController extends AdminController

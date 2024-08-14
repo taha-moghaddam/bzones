@@ -5,7 +5,7 @@ use Bikaraan\BZones\Http\Controllers\ZonesController;
 use Bikaraan\BZones\Http\Controllers\SearchController;
 
 Route::group([
-    'prefix' => config('admin.extensions.bzones.config.prefix', 'bzones'),
+    'prefix' => config('bcore.extensions.bzones.config.prefix', 'bzones'),
     'as' => 'bzones.',
 ], function (Router $router) {
 
